@@ -4,7 +4,7 @@ var pen = canvas.getContext("2d");
 var showAxis=document.getElementById("axisToggle");
 var input=document.getElementById("input");
 var scaleXButton=document.getElementById("scale");
-textSize=10;
+textSize=5;
 
 //resize window to screen size
 pen.canvas.width  = window.innerWidth;
