@@ -8,7 +8,7 @@ textSize=30;
 
 //resize window to screen size
 pen.canvas.width  = window.innerWidth;
-pen.canvas.height = window.innerHeight;
+pen.canvas.height = window.innerHeight*10;
 
 //varaibles
 //canvas size
