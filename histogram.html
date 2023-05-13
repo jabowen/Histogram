@@ -12,7 +12,6 @@
          float: left;
          width: 50%;
          padding: 10px;
-         height: 300px; /* Should be removed. Only for demonstration */
        }
               
        /* Clear floats after the columns */
@@ -25,7 +24,7 @@
 
 <div class="row">
        <div class="column">
-              <canvas id="canvas" width="500" height="250" style="border:3px solid #d3d3d3;">
+              <canvas id="canvas" width="500" height="300" style="border:3px solid #d3d3d3;">
               </canvas>
 
               <form action="/action_page.php">
@@ -42,7 +41,7 @@
                      onclick="scaleChange();">
               </div>
        <div class="column">
-              <p style = "position:relative; left:20px;">
+              <p style = <p style = "position:relative; left:20px; font-size: 20px; font-family: Arial; color: gray; line-height: 2;" >
                             This is a fun personal project I made to refresh myself on HTML and Javascript.
                      The dataset is a generated randomly, first picking a random number between 1 and 1000 to be the size,
                      and then getting that many random integers between 0 and 100.
