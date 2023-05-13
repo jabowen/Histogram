@@ -7,7 +7,7 @@ var scaleXButton=document.getElementById("scale");
 textSize=10;
 
 //resize window to screen size
-pen.canvas.width  = window.innerWidth/2;
+pen.canvas.width  = window.innerWidth/2-20;
 pen.canvas.height = window.innerHeight;
 
 //varaibles

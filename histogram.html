@@ -2,21 +2,57 @@
 <html>
 <body>
 
-<canvas id="canvas" width="500" height="250" style="border:3px solid #d3d3d3;">
-</canvas>
+<style>
+       * {
+         box-sizing: border-box;
+       }
+              
+       /* Create two equal columns that floats next to each other */
+       .column {
+         float: left;
+         width: 50%;
+         padding: 10px;
+         height: 300px; /* Should be removed. Only for demonstration */
+       }
+              
+       /* Clear floats after the columns */
+       .row:after {
+         content: "";
+         display: table;
+         clear: both;
+       }
+</style>
 
-<form action="/action_page.php">
-  <label>Input:</label>
-  <input type="text" id="input"><br><br>
-  <input type="button" value="Submit" onClick="newInput();">
-</form>
+<div class="row">
+       <div class="column">
+              <canvas id="canvas" width="500" height="250" style="border:3px solid #d3d3d3;">
+              </canvas>
 
-<input type="button" id="axisToggle" value="No Axis"
-       onclick="toggle();">
-<input type="button" id="shuffle" value="Shuffle"
-       onclick="shuffle();">
-<input type="button" id="scale" value="X Scale: Flex"
-       onclick="scaleChange();">
+              <form action="/action_page.php">
+                <label>Input:</label>
+                <input type="text" id="input"><br><br>
+                <input type="button" value="Submit" onClick="newInput();">
+              </form>
+
+              <input type="button" id="axisToggle" value="No Axis"
+                     onclick="toggle();">
+              <input type="button" id="shuffle" value="Shuffle"
+                     onclick="shuffle();">
+              <input type="button" id="scale" value="X Scale: Flex"
+                     onclick="scaleChange();">
+              </div>
+       <div class="column">
+              <p style = "position:relative; left:20px;">
+                            This is a fun personal project I made to refresh myself on HTML and Javascript.
+                     The dataset is a generated randomly, first picking a random number between 1 and 1000 to be the size,
+                     and then getting that many random integers between 0 and 100.
+                     The red and green values of each bar are selected randomly, while the blue is a function of
+                     postion, which guarantee no two bars are the same color, and gives a nice gradient.
+              </p>
+              <input type="button" id="link" style = "position:relative; left:20px;" value="View Source Code Here"
+                     onclick="window.location.href='https://github.com/jabowen/Histogram';">
+       </div>
+</div>
 
 <script src="histogram.js"></script>
 
